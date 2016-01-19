@@ -6,27 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>SignIn</title>    
-
-	<link rel="stylesheet" type="text/css" href="custom-css.css">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css" />
+    <link rel="stylesheet" type="text/css" href="custom-css.css">
     <link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
+	
     <script src="parsecdn.js"></script>
+
     <script src="custom.js"></script>
 </head>
 <body>
-<div class="container">
-	<form>
-	  <div class="form-group">
-	    <label for="exampleInputEmail1">Email address</label>
-	    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-	  </div>
-	  <div class="form-group">
-	    <label for="exampleInputPassword1">Password</label>
-	    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-	  </div>
-	 
-	  <button type="submit" class="btn btn-default">Submit</button>
-	</form>
-</div>
+<div data-role="page" id="signin" class="container">
+ 
+    <!-- Create the a header and include a title -->
+	<div class="row heading">
+    	<h1>login</h1>
+    </div>
+    <!-- Create a div for content -->
+	<div data-role="content">	
+		
+        <!-- Create a standard html form for the user to complete -->
+		
+		<!-- MODIFICATION: changed id to signinform -->
+		<form id="signinform" method="post" action="#">
+			<!-- MODIFICATION: Changed headed text to Sign Up -->
+			<h3 id="details-head"> Input Details: </h3>
+			<div class="form-inputs">
+			<input type="text" name="username" id="username" placeholder="User Name" required/>
+			
+			<input type="password" name="password" id="password" placeholder="Password" />
+
+			</div>
+		      <!-- Add a submit button -->
+		
+		   <button id="submit-signin" class="btn btn-primary" onclick="myUser()">Submit</button>
+		</form>
+ 
+       
+ 
+	</div> <!-- Close the content div -->
+</div> 
 
 
 </body>

@@ -1,3 +1,22 @@
 div.container {
 	margin-top: 100px;
 }
+
+div.row.heading {
+	color: blue;
+	text-align: center;
+}
+
+#submit-signup {
+	background-color: #1bc0cf !important;
+	color: #FFFFFF;
+}
+
+#details-head {
+	text-align: center !important;
+}
+
+#submit-signin {
+	background-color: #1bc0cf !important;
+	color: #FFFFFF;
+}

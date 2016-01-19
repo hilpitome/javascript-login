@@ -15,18 +15,37 @@ Parse.initialize("JJTVzrYgHH04oeM1CvAuS9cKeWQXRLQ8rQOyYnPj", "3vC8VQzkbXQM6JI96o
 		user.set("phone", phone);
 		user.set("password", password);
 		  
+	// save the user to the cloud storage
 		user.signUp(null, {
-		  success: function(user) {
-		    alert ("Hooray! Let them use the app now!!");
-		  },
-		  error: function(user, error) {
-		    // Show the error message somewhere and let the user try again.
-		    alert("Error: " + error.code + " " + error.message);
-		  }
-					
-	    });
+		     success: function(user) {
+		           // return the success response
+		           alert("Success!");
+		           
+		     },
+		     error: function(user, error) {
+		            // return the error response
+		            alert("Error: " + error.code + " " + error.message);
+		      }
+		});
 	}
 
+    function myUser() {
+		var username = $('input[name=username]').val();
+	    var password = $('input[name=password]').val();
+					
+	    // check log in details with parse.com
+		    Parse.User.logIn(username , password, {
+			success: function(user) {
+			       
+			       $( ":mobile-pagecontainer" ).pagecontainer( "change", "home.html" );
+			       
+			},
+			error: function(user, error) {
+				// The login failed. Check error to see why.
+				console.log("fail");
+			}
+	    });
+    }
 		
 
 	
